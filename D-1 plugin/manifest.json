@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Amazon India climate change",
+  "version": "1.0",
+  "description": "Detects product type on Amazon India and prints it on the console",
+  "permissions": [
+    "activeTab",
+    "http://www.amazon.in/*",
+    "https://www.amazon.in/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.in/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
